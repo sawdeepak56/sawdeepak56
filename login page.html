@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-image: url("img.jpg");
+            display: flex;
+            justify-content: center;
+
+        }
+
+        input {
+
+            width: 250px;
+            border: 5px solid gray;
+
+
+        }
+
+        .Login {
+
+            
+            color: white;
+            padding-top: 200px;
+            padding-bottom: 100px;
+            padding-left: 170px;
+            padding-right: 100px;
+          }
+
+        .btn {
+
+            border: none;
+            width: 80px;
+            height: 30px;
+
+
+
+        }
+
+        .lg form {
+            padding-top: 100px;
+        }
+        a:hover{
+            background-color: gray;
+        }
+        .btn:hover{
+            background-color:gray;
+
+        }
+    </style> -->
+</head>
+<header>
+    <nav>
+            
+        <ul>
+            <li> <a href = "new home page.html">Home</a></li>
+            <li> <a href = "about.html">About</a></li>
+            <li> <a href = "login page.html">Login</a></li>
+            <li> <a href = "contact.html">Contact Us</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+    <div class="Login">
+        <form name="loginForm" action="/login.py" onsubmit="return validateLogin()" method="post">
+            <h1>User Login</h1>
+            <div class='lg form'>
+
+                Email or Phone Number: <br>
+                <input type="text" placeholder="user name or phone" name="email"><span></span>
+            </div>
+
+            <div class='lg form'>
+
+
+                Password:
+                <br>
+                <input type="password" id="psw" name="Password" placeholder="Your Password">
+            </div>
+            <br>
+            <a href="#" >Forget password?</a>
+            <p> new user</p>
+            <a href="registration.html">register now</a>
+
+            
+            <a href="home page.html"><input type="submit" value="Login" class="btn" ></a>
+
+        </form>
+    </div>
+
+</body>
+<script>
+
+    function validateLogin() {
+        let Password = document.forms['loginForm']['Password'].value;
+
+        let email = document.forms['loginForm']['email'].value;
+        if (email == '') {
+            alert('email/phone must be filled out');
+            return false
+        }
+        if (Password == '') {
+            alert('password must be filled out');
+            return false
+        }
+
+
+    }
+
+
+
+
+</script>
+
+</html>
